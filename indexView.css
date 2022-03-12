@@ -1,0 +1,211 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+
+.root {
+  height: 100vh;
+  background-color: #62c0ff;
+  background-image: url('cards_db/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 134.69%;
+  overflow-y: auto;
+  animation-duration: 3s;
+  animation-name: fadeInDownBig;
+}
+
+@keyframes fadeInDownBig {
+  0% {
+    opacity: 0;
+    transform: translateY(-2000px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.info-wraper {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  height: 552px;
+  width: 450px;
+  border-radius: 15px;
+  padding-top: 50px;
+  z-index: 1;
+}
+
+.labelWrapper {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  height: 200px;
+}
+
+.label-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-text {
+  width: 252px;
+  height: 35px;
+  border-radius: 10px;
+  border: 1px solid rgba(27, 26, 52, 0.29);
+  padding: 0.8rem;
+  font-size: 12px;
+  line-height: 120%;
+  color: rgba(27, 26, 52, 0.67);
+}
+
+.input-text:focus {
+  outline: none;
+  border-color: blue;
+}
+
+.label-title {
+  font-family: 'Disney', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  margin: 0.9rem 0;
+  color: #2196F3;
+}
+
+.radioWrapper {
+  display: block;
+  position: relative;
+  padding-left: 130px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #2196F3;
+  font-family: 'Disney',
+    sans-serif;
+  font-size: 30px;
+}
+
+.radioWrapper input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  margin-left: 100px;
+  margin-bottom: 20px;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.radioWrapper:hover input~.checkmark {
+  background-color: #ccc;
+}
+
+.radioWrapper input:checked~.checkmark {
+  background-color: #2196F3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radioWrapper input:checked~.checkmark:after {
+  display: block;
+}
+
+
+.radioWrapper .checkmark:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+.submit {
+  margin: 0.9rem 0;
+  width: 300px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: #62c0ff;
+  color: white;
+  transition: background 0.8s;
+  font-family: 'Disney', sans-serif;
+  font-size: 40px;
+  font-weight: bold;
+  animation: pulse 2s infinite;
+}
+
+.submit:active {
+  opacity: 0.8;
+  background-size: 100%;
+  transition: background 0s;
+  outline: none;
+}
+
+.submit:hover {
+  outline: none;
+  background-color: #2476fa;
+}
+
+.submit:focus {
+  outline: none;
+}
+
+@font-face {
+  font-family: Disney;
+  src: url('waltograph42.ttf');
+}
+
+@font-face {
+  font-family: Disney;
+  font-weight: bold;
+  src: url('waltograph42.ttf');
+}
+
+h1 {
+  font-family: 'Disney', sans-serif;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 60px;
+  margin-bottom: 10px;
+  color: #2196F3;
+
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.95);
+  }
+
+  70% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.95);
+  }
+}

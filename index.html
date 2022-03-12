@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="stylesheet" href="indexView.css" />
+  <title>Disney Memory Game</title>
+</head>
+
+<body>
+  <div class="root">
+    <div class="info-wraper">
+      <h1> Disney Memory Game </h1>
+      <div class="labelWrapper">
+        <label class="label-text" for="namePlayer1">
+          <span class="label-title">Player 1 :</span>
+          <input class="input-text" onfocus="this.value=''" type="text" id="name1" value="Enter player 1 name" />
+        </label>
+        <label class="label-text" for="namePlayer2">
+          <span class="label-title">Player 2 :</span>
+          <input class="input-text" onfocus="this.value=''" type="text" id="name2" value="Enter player 2 name" />
+        </label>
+
+        <span class="label-title">Select Board Size :</span>
+        <label class="radioWrapper">4X4
+          <input class="input-radio" type="radio" checked="checked" id="4" name="size" value="4">
+          <span class="checkmark"></span>
+        </label>
+        <label class="radioWrapper">5X5
+          <input class="input-radio" type="radio" checked="checked" id="5" name="size" value="5">
+          <span class="checkmark"></span>
+        </label>
+
+        <span class="input-label">
+          <button class="submit" type="submit">Lets Play!</button>
+        </span>
+
+      </div>
+    </div>
+    <script type="module" src="index.js"></script>
+    <script type="module" src="/memoryGamePage/Player.mjs"></script>
+</body>
+
+</html>
